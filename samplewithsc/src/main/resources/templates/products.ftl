@@ -1,0 +1,21 @@
+<#import "/spring.ftl" as spring />
+<#assign xhtmlCompliant = true in spring>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Product Page</h1>
+
+
+<h2>Products</h2>
+<ul>
+<#list products as product>
+    <li>${product}</li>
+</#list>
+</ul>
+
+<a href="/logout">logout</a>
+<a href="${account}" + "?referrer=springboot-security&referrer_uri="+>account</a>
+</body>
+
+</html>
